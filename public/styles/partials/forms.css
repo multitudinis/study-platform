@@ -1,0 +1,53 @@
+.select-block label,
+.input-block label,
+.textarea-block label {
+    font-size: 1.4rem;
+    color: var(--color-text-complement);
+}
+
+.input-block input,
+.select-block select,
+.textarea-block textarea {
+    width: 100%; /*Altura */
+    height: 5.6rem; /*Largura */
+    margin-top: 0.8rem; /*Margem topo "Separa do objeto de cima */
+    border-radius: 0.8rem; /*Trabalha as bordas "Arredondando-as" */
+    background: var(--color-input-background);/*Cor de fundo */
+    border: 1px solid var(--color-line-in-white);/*Cores das bordas : Tamanho em PX, Cor Solida */
+    outline: 0; /*Na caixa de selação retira a transição "que existe "*/
+    padding: 0 1.6rem; /*Afasta o texto dá "uma margem" da borda da caixa de seleção */
+    font: 1.2rem Archivo;
+}
+
+.textarea-block textarea {
+    padding: 1.2rem 1.6rem;
+    height: 16rem;
+    resize: vertical;
+
+}
+
+.input-block,
+.textarea-block {
+    position: relative;
+}
+
+.input-block:focus-within::after,
+.textarea-block:focus-within::after {
+    content: "";
+
+    width: calc(100% - 3.2rem);
+    height: 2px;
+    background: var(--color-primary-light);
+
+    position: absolute; /*Posição absoluta da caixa, precisa setar position relative em INPUT-BLOCK*/
+
+    left: 1.6rem;
+    /* right: 1.6rem; */
+    bottom: 0px;
+}
+
+label small {
+    font-size: 1.2rem;
+    padding-left: 1.2rem;
+    color: var(--color-small-info);
+}
