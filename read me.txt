@@ -1,0 +1,5 @@
+pra iniciar o server:
+
+$npm run dev
+
+o site vai abrir no localhost porta  5500
